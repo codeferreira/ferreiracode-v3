@@ -21,8 +21,9 @@ const Home: NextPage = () => {
             </h2>
             <h1 className="text-6xl font-bold mb-6">Software Developer</h1>
             <p className="text-xl leading-6 text-purple-400">
-              I have 6+ experience on Web and Mobile Development. <br />
-              Passionate about transforming ideas into products through code.{' '}
+              I have 6+ years of experience on Web and Mobile Development.
+              <br />
+              Passionate about transforming ideas into products through code.
               <br />
               So, how can I bring your idea to life?
             </p>
