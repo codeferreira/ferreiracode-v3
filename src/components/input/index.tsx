@@ -1,8 +1,8 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes } from 'react'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label: string;
-  name: string;
+  label: string
+  name: string
 }
 
 const Input = ({ label, name, ...props }: InputProps) => {
@@ -12,9 +12,14 @@ const Input = ({ label, name, ...props }: InputProps) => {
         {label}
       </label>
 
-      <input id={name} name={name} className="border border-gray-300 focus:border-purple-400 focus:ring-purple-400 block bg-gray-50 py-3 px-4 rounded-md w-full max-w-lg mb-3 text-purple-700" {...props} />
+      <input
+        id={name}
+        name={name}
+        className="border border-gray-300 focus:border-purple-400 focus:ring-purple-400 block bg-gray-50 py-3 px-4 rounded-md w-full max-w-lg mb-3 text-purple-700"
+        {...props}
+      />
     </>
   )
 }
 
-export default Input;
+export default Input

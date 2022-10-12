@@ -16,15 +16,43 @@ const GetInTouch = () => {
             <h1 className="text-3xl font-bold text-purple-700 mb-3">
               Get in touch
             </h1>
-            <form action="https://formsubmit.co/contact@ferreiracode.com" method="POST">
-              <Input label="Your name" name="name" placeholder="John Doe" required />
-              <Input label="Your email" name="email" type="email" placeholder="john@doe.com" required />
-              <label htmlFor="subject" className="text-purple-400 font-semibold mb-2">
+            <form
+              action="https://formsubmit.co/contact@ferreiracode.com"
+              method="POST"
+            >
+              <Input
+                label="Your name"
+                name="name"
+                placeholder="John Doe"
+                required
+              />
+              <Input
+                label="Your email"
+                name="email"
+                type="email"
+                placeholder="john@doe.com"
+                required
+              />
+              <label
+                htmlFor="message"
+                className="text-purple-400 font-semibold mb-2"
+              >
                 Your message
-                <textarea className="block bg-gray-50 py-2 px-4 border border-gray-300 rounded-md w-full max-w-lg mb-6 font-normal h-36 resize-none" name="subject" placeholder="What you want to talk about?" />
+                <textarea
+                  className="block bg-gray-50 py-2 px-4 border border-gray-300 rounded-md w-full max-w-lg mb-6 font-normal h-36 resize-none"
+                  name="message"
+                  placeholder="What you want to talk about?"
+                />
               </label>
-              <input type="hidden" name="_subject" value="New submission from website" />
-              <button type="submit" className="bg-purple-700 w-full max-w-lg py-3 px-4 font-bold text-white rounded-md">
+              <input
+                type="hidden"
+                name="_subject"
+                value="New submission from website"
+              />
+              <button
+                type="submit"
+                className="bg-purple-700 w-full max-w-lg py-3 px-4 font-bold text-white rounded-md"
+              >
                 Send
               </button>
             </form>
