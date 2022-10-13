@@ -87,6 +87,22 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
+
+        <meta name="description" content="A portal to help you transform ideas into products." />
+
+        <meta property="og:url" content="https://ferreiracode.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="FerreiraCode" />
+        <meta property="og:description" content="A portal to help you transform ideas into products." />
+        <meta property="og:image" content="https://i.imgur.com/mXSLCV8.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="ferreiracode.com" />
+        <meta property="twitter:url" content="https://ferreiracode.com/" />
+        <meta name="twitter:title" content="FerreiraCode" />
+        <meta name="twitter:description" content="A portal to help you transform ideas into products." />
+        <meta name="twitter:image" content="https://i.imgur.com/mXSLCV8.png" />
+
       </Head>
       <body>
         <Main />
