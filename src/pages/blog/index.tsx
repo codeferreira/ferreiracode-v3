@@ -1,43 +1,28 @@
 import { GetStaticProps, NextPage } from 'next'
 import { promises as fs } from 'fs'
 import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import glob from 'fast-glob'
 import matter from 'gray-matter'
-import Link from 'next/link'
-
-type Post = {
-  filepath: string
-  metadata: {
-    title: string
-    slug: string
-    isPublished: boolean
-    date: Date
-  }
-  mdx: MDXRemoteSerializeResult
-}
+import Header from 'components/header'
+import { HighlightPost } from 'components/blog-post'
+import { PostModel } from 'models/post.model'
 
 type BlogHomeProps = {
-  posts: Post[]
+  posts: PostModel[]
 }
 
 const BlogHome: NextPage<BlogHomeProps> = ({ posts }) => {
   return (
-    <>
-      <h1>Blog Home</h1>
-      {!!posts.length &&
-        posts.map((post) => (
-          <Link
-            className="px-4 py-3 border-solid border rounded-md border-gray-500"
-            key={post.metadata.slug}
-            href={`/blog/${post.metadata.slug}`}
-          >
-            <a>
-              <h2>{post.metadata.title}</h2>
-            </a>
-          </Link>
-        ))}
-    </>
+    <section className="max-w-screen-2xl px-10 m-auto font-Montserrat bg-white">
+      <Header />
+      <main className="flex flex-col justify-center max-w-3xl m-auto gap-4">
+        <h1 className="text-2xl mb-7 text-purple-700 font-bold">Blog</h1>
+        {!!posts.length &&
+          posts.map((post) => (
+            <HighlightPost key={post.metadata.slug} {...post} />
+          ))}
+      </main>
+    </section>
   )
 }
 
