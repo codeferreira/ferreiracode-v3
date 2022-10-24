@@ -5,17 +5,32 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      colors: {
-        purple: {
-          100: '#e7d7f0',
-          200: '#D6B8EE',
-          300: '#BC91E4',
-          400: '#675c87',
-          700: '#563373',
-          800: '#381b50',
-        },
+    fontSize: {
+      xs: 12,
+      sm: 16,
+      md: 18,
+      lg: 20,
+      xl: 24,
+      '2xl': 32,
+      '3xl': 48,
+    },
+    colors: {
+      transparent: 'transparent',
+      black: '#000',
+      white: '#FFF',
+      purple: {
+        100: '#E7D7F0',
+        200: '#837A9D',
+        400: '#675C87',
+        700: '#563373',
+        800: '#381B50'
       },
+      gray: {
+        100: '#F4F4F4',
+        300: '#727272'
+      }
+    },
+    extend: {
       fontFamily: {
         Montserrat: ['Montserrat', 'sans-serif'],
       },
